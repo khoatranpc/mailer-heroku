@@ -20,8 +20,8 @@ let mailOSetting = (OTP,mailAddress)=>{
 }
 //otp must have type string
 const mailer = async (req, res) => {
-    const {OTP,email} = req.body;
-    await transporter.sendMail(mailOSetting(OTP,email),  (error, info)=>{
+    const {OTP,mail} = req.body;
+    await transporter.sendMail(mailOSetting(OTP,mail),  (error, info)=>{
         if (error) {
             console.log(error);
             res.end();
