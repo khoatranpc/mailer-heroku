@@ -14,7 +14,7 @@ const main = ()=>{
             Message:'Hello khoa dep trai'
         })
     })
-    app.listen(port,()=>{
+    app.listen(process.env.PORT||port,()=>{
         console.log(`This server is running on port ${port}`);
     })
 }
